@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const MenuITem = ({ children, to = "#", ...restProps }) => (
   <Fragment>
-    <Link to={to}>
       <Typography
         style={{
           display: "flex",
@@ -14,9 +13,10 @@ const MenuITem = ({ children, to = "#", ...restProps }) => (
         }}
         variant="h5"
       >
-        {children}
+        <Link to={to}>
+          {children}
+        </Link>
       </Typography>
-    </Link>
   </Fragment>
 );
 

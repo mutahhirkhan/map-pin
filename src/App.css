@@ -4,9 +4,12 @@
   border: 0;
   box-sizing: border-box;
 }
+html{
+  font-size: 62.5%;
+}
 
 :root{
-  --navbar-height: 50px
+  --navbar-height: 40px
 }
 
 .App {
