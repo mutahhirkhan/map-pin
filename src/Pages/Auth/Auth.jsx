@@ -14,7 +14,7 @@ const useStyle = makeStyles((theme) => ({
     padding:"2em",
   },
   authImg:{
-    height:"70vh",
+    // height:"70vh",
     background:`url(${wallpaper}) no-repeat center / contain` , 
 
   },
@@ -24,7 +24,7 @@ const Auth = () => {
   const classes = useStyle();
   return (
     <div className={`${classes.root} center`}>
-        <Grid container  className={`center ${classes.container1}`}  xs={12} >
+        <Grid container  className={`center ${classes.container1}`} xs={10} >
             <Grid className="center" item container  xs={12}  spacing={3}>
                 <Grid className={classes.authImg} item sm={4} md={3}></Grid>
                 <Grid item sm={4} md={3}>
