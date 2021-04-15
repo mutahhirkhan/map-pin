@@ -10,11 +10,16 @@
 }
 
 .App {
-  text-align: center;
+  padding-top: var(--navbar-height);
 }
 
 .center{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a, button{
+  text-decoration: none;
+  color: inherit;
 }
