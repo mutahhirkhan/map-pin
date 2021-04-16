@@ -1,24 +1,27 @@
 import React, {useState} from "react";
 import { TextField } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import { connect } from 'react-redux';
+import { signup } from 'src/Redux/auth/authActions';
 
-const SignupForm = () => {
+const SignupForm = ({signup}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   var handleSubmit = (e) => {
     e.preventDefault()
-    var signinData = {
+    var signupData = {
+      name,
       email,
       password,
     };
-    console.log(signinData);
+    console.log(signupData);
+    // signup(signupData)
   };
 
   return (
-    <div>
-      <h1>SIGN up</h1>
-      <form onSubmit={handleSubmit}>
+      <form style={{display: "grid", gap:"1em"}} onSubmit={handleSubmit}>
       <TextField
           type="text"
           value={name}
@@ -32,16 +35,18 @@ const SignupForm = () => {
           onChange={(e) => setEmail(e.target.value)}
         ></TextField>
       <TextField
-          type="password"
+          // type="password"
           value={password}
           label="Password"
           onChange={(e) => setPassword(e.target.value)}
         ></TextField>
-        <Button type="submit" children="Sign up"></Button>
-
+      <Button style={{backgroundColor:"none"}} variant="contained" type="submit" children="Sign up"></Button>
       </form>
-    </div>
   );
 };
 
-export default SignupForm;
+var actions = {
+  signup,
+}
+
+export default connect(null, actions)(SignupForm);
