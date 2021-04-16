@@ -14,10 +14,21 @@ const useStyle = makeStyles((theme) => ({
     padding:"2em",
   },
   authImg:{
+    width:"100%",
     height:"70vh",  
     background:`url(${wallpaper}) no-repeat center / contain` , 
-
+    [theme.breakpoints.down('sm') ]: {
+      display: 'none',
+    },
   },
+  authForm: {
+    width:"60%",
+    justifySelf:"center",
+    [theme.breakpoints.up('md')]: {
+      width:"100%",
+    },
+  }
+
 }));
 
 const Auth = () => {
@@ -25,9 +36,9 @@ const Auth = () => {
   return (
     <div className={`${classes.root} center`}>
         <Grid container  className={`center`} xs={10} >
-            <Grid className="center" item container  spacing={5}>
+            <Grid className="center" item container  spacing={5 }>
                 <Grid className={classes.authImg}  item sm={6} md={5}></Grid>
-                <Grid item  sm={6} md={5}><AuthForm/></Grid>
+                <Grid className={`${classes.authForm}`} item  sm={6} md={5}><AuthForm/></Grid>
             </Grid>
         </Grid>
     </div>

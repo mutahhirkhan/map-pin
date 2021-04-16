@@ -4,9 +4,9 @@
   border: 0;
   box-sizing: border-box;
 }
-html{
+/* html{
   font-size: 62.5%;
-}
+} */
 
 :root{
   --navbar-height: 40px

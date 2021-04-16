@@ -22,7 +22,6 @@ const MenuITem = ({ children, to = "#", ...restProps }) => (
 );
 
 const Navbar = ({ auth, signout }) => {
-  auth = "hi";
   return (
     <div className="navbar">
       <MenuITem to="/">App</MenuITem>

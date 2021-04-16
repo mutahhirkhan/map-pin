@@ -17,7 +17,7 @@ const AuthForm = () => {
         </Button>
         <Button
         onClick={() => setFormToggle('signup')}
-          style={{ position: "relative", justifySelf: "end" }}
+          style={{ position: "relative", justifySelf: "end" }}  
           background="none" color="black"
         >
           SignUp

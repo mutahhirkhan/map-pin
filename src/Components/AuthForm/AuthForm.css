@@ -3,12 +3,18 @@
     /* width: 50em; */
     display: grid;
     grid-template-rows: min-content 1fr min-content;
-    row-gap: 2em;
+    row-gap: 1.5em;
     transform: translateX(-20px);
     box-shadow:0px 2px 5px 2px rgba(0,0,0,0.3);
     border-radius: 30px 30px 0 30px;
-    padding: 2em;
-    margin: 2em;
+    padding: 1.5em;
+    margin: 0.5em;
+    
+}
+@media only screen and (max-width:650px) {
+    .auth-form{
+        margin: 0 0 0 1em;
+    }
 }
 .auth-fields{
     width: 100%;
@@ -26,13 +32,13 @@
     background: black;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 5px);
+    transform: translate(-50%, 10px);
 }
 .auth-form-btn{
     /* background: black; */
     display: grid;
     justify-items: center;
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }
 
 .or-separator{
